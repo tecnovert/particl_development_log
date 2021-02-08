@@ -1,5 +1,13 @@
 # Particl Development Log
 
+## 2021-02-08
+
+- Wallet tracks anon watchonly transactions.
+    - Incoming stealth watchonly pubkeys are added to mapWatchKeys in LegacyScriptPubKeyMan in addition to the script added to setWatchOnly.  Adding the pubkey is wasteful of memory, especially as it loads related scripts, but is the option most compatible with the rest of the code.  For tracking anon watchonly transactions checking if the destination script for the keyid is in setWatchOnly (if HaveWatchOnly()) in CWallet::IsMine(const CKeyID &address) would be enough.
+    
+    
+    
+
 ## 2021-02-02
 
 Merged latest Bitcoin code into Particl:
