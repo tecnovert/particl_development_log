@@ -1,5 +1,11 @@
 # Particl Development Log
 
+## 2021-02-11
+
+Extended RPC functions to allow anon transactions to be manually crafted.
+Anon inputs must exist in the chain before being used, as the pubkey index is used in transactions.
+Added inputs to coincontrol options on fundrawtransactionfrom to submit data for inputs not already part of the txn.
+
 ## 2021-02-08
 
 - Wallet tracks anon watchonly transactions.
