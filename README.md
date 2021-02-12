@@ -3,6 +3,11 @@
 
 ## 2021-02-12
 
+Found intermittent failure in rpc_part_filtertransactions
+Amount search '70000' fails with an extra result.
+Due to the anon output being randomly split. eg for a split of  -17.00000000 and -3.00000000 the filter will match the -17.
+
+
 Various ci fixes.
 
 - Fix is_PE_dll_32bit()
@@ -13,13 +18,14 @@ Various ci fixes.
 
 - initialization-order-fiasco
     - Define another UNIX_EPOCH_TIME in insight module
-    
+
     
 ## 2021-02-11
 
 Extended RPC functions to allow anon transactions to be manually crafted.
 Anon inputs must exist in the chain before being used, as the pubkey index is used in transactions.
 Added inputs to coincontrol options on fundrawtransactionfrom to submit data for inputs not already part of the txn.
+
 
 ## 2021-02-08
 
