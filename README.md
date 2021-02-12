@@ -1,5 +1,20 @@
 # Particl Development Log
 
+
+## 2021-02-12
+
+Various ci fixes.
+
+- Fix is_PE_dll_32bit()
+    - i386:x86-64 is 64bit
+
+- Heap use after free in PlaceRealOutputs
+    - CStoredTransaction stx was destroyed when it went out of scope.
+
+- initialization-order-fiasco
+    - Define another UNIX_EPOCH_TIME in insight module
+    
+    
 ## 2021-02-11
 
 Extended RPC functions to allow anon transactions to be manually crafted.
