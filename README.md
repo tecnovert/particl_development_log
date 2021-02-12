@@ -3,6 +3,8 @@
 
 ## 2021-02-12
 
+Use Shuffle in random.h instead of std::shuffle to avoid self assign bug.
+
 Found intermittent failure in rpc_part_filtertransactions
 Amount search '70000' fails with an extra result.
 Due to the anon output being randomly split. eg for a split of  -17.00000000 and -3.00000000 the filter will match the -17.
