@@ -2,6 +2,8 @@
 
 ## 2021-02-13
 
+Removed obsolete rpc_wallet_tests.cpp
+
 Merged latest Bitcoin code.
 
 
