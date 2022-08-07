@@ -1,5 +1,13 @@
 # Particl Development Log
 
+## 2022-08-07
+
+Merged latest Bitcoin code.
+    bc886fcb31e1afa7bbf7b86bfd93e51da7076ccf
+    mapWallet and mapTxSpends changed from std::map to std::unordered_map
+        mapTxSpends can no longer find spends from only a txid, needs txid and vout.
+
+
 ## 2021-02-13
 
 Removed obsolete rpc_wallet_tests.cpp
